@@ -1,9 +1,12 @@
-⚽ UEFA Champions League Analysis & Cleaning Pipeline
+# ⚽ UEFA Champions League Analysis & Cleaning Pipeline
 
 Hey there! 👋 Welcome to my end-to-end Python data engineering and exploratory data analysis project. This project transforms messy, raw historical UEFA Champions League (UCL) performance statistics and finals match records (1955–2023) into clean, structured data for analytics and visual dashboards. The repository features modular Jupyter Notebook workflows covering automated data quality profiling, missing value interpolation, string parsing, feature engineering, and statistical analysis.
 
-📁 Repository Structure
+---
 
+## 📁 Repository Structure
+
+```text
 .
 ├── data/
 │   ├── UCL_AllTime_Performance_Table.csv # Raw all-time historical performance table
