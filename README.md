@@ -45,8 +45,8 @@ The data engineering workflow is structured into four sequential phases inside `
 ->Header Standardization: Renames abbreviated and non-standard column titles (# → Rank, M. → Matches, Dif → Goal_Difference, Pt. → Points).
 ->Composite Column Extraction: Splits composite score strings into discrete numerical metrics for goals scored and conceded.
 
-
-
+Linear interpolation for missing team ranks:
+df_alltime['Rank'] = df_alltime['#'].interpolate(method='linear', limit_direction='forward').astype(int)
 
 
 
