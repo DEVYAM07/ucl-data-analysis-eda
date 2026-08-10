@@ -88,18 +88,9 @@ top_clubs = df_alltime[df_alltime['Matches'] >= 50].sort_values(by='Win_Rate', a
 
 Dominant Force: Real Madrid leads all-time historical metrics in total match victories, goals scored, and overall finals conversion rate.
 
-🚀 How to Run
-Clone the Repository
+## 🚀 How to Run
 
-Bash
-git clone [https://github.com/DEVYAM07/ucl-data-analysis-eda.git](https://github.com/DEVYAM07/ucl-data-analysis-eda.git)
-cd ucl-data-analysis-eda
-Install Dependencies
-
-Bash
-pip install pandas numpy matplotlib seaborn openpyxl jupyter
-Launch Notebook Pipeline
-
-Bash
-jupyter notebook notebooks/UCL_Data_Analysis.ipynb
-Run all cells sequentially to execute the cleaning pipeline, visual analysis, and report generation.
+1. **Clone the Repository**
+   ```bash
+   git clone [https://github.com/DEVYAM07/ucl-data-analysis-eda.git](https://github.com/DEVYAM07/ucl-data-analysis-eda.git)
+   cd ucl-data-analysis-eda
