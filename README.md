@@ -108,7 +108,9 @@ Run all cells sequentially to execute the cleaning pipeline, visual analysis, an
 🧰 Tech Stack
 
 Language: Python 3.8+
+
 Data Manipulation: pandas, numpy
+
 Visualization: matplotlib, seaborn
 
 Thanks for checking out my project! Feel free to star ⭐️ the repository if you found it useful!
