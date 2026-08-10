@@ -45,11 +45,11 @@ The data engineering workflow is structured into four sequential phases inside `
 ->Header Standardization: Renames abbreviated and non-standard column titles (# → Rank, M. → Matches, Dif → Goal_Difference, Pt. → Points).
 ->Composite Column Extraction: Splits composite score strings into discrete numerical metrics for goals scored and conceded.
 
-## Linear interpolation for missing team ranks:
+Linear interpolation for missing team ranks:
 ```
 df_alltime['Rank'] = df_alltime['#'].interpolate(method='linear', limit_direction='forward').astype(int)
 ```
-""Extract composite goal statistics into numeric features:
+Extract composite goal statistics into numeric features:
 ```
 df_alltime['Goals_Scored'] = df_alltime['goals'].str.split(':').str.get(0).astype(int)
 df_alltime['Goals_Conceded'] = df_alltime['goals'].str.split(':').str.get(1).astype(int)
@@ -59,11 +59,11 @@ df_alltime.drop(columns=['goals'], inplace=True)
 ->Type Casting & Standardization: Converts formatted attendance values into standard numeric integer types.
 ->Deduplication: Handles historical edge cases, such as removing duplicate match replay records (e.g., 1973–74 Bayern Munich vs. Atlético Madrid replay).
 
-##Clean attendance figures and cast to integer:
+Clean attendance figures and cast to integer:
 ```
 df_finals['Attendance'] = df_finals['Attendance'].astype(str).str.replace(',', '').astype(int)
 ```
-##Deduplicate replay records by keeping primary final fixture:
+Deduplicate replay records by keeping primary final fixture:
 ```
 df_finals = df_finals.drop_duplicates(subset=['Season'], keep='first')
 ```
@@ -71,7 +71,7 @@ df_finals = df_finals.drop_duplicates(subset=['Season'], keep='first')
 ->Historical Dominance: Computes total win-loss ratios and goal differentials across all participating European clubs.
 ->Finals Efficiency: Evaluates win-to-appearance ratios in finals for top-performing teams.
 
-##Top 5 clubs by overall win percentage (min. 50 matches):
+Top 5 clubs by overall win percentage (min. 50 matches):
 ```
 df_alltime['Win_Rate'] = (df_alltime['Wins'] / df_alltime['Matches']) * 100
 top_clubs = df_alltime[df_alltime['Matches'] >= 50].sort_values(by='Win_Rate', ascending=False).head(5)
