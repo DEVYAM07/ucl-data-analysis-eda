@@ -83,3 +83,23 @@ top_clubs = df_alltime[df_alltime['Matches'] >= 50].sort_values(by='Win_Rate', a
 | :--- | :---: | :--- | :--- | :--- |
 | **`UCL_AllTime_Performance_Table.csv`** | 354 | Club-level all-time competition statistics | `Rank` | `Goals_Scored`, `Goals_Conceded`, `Win_Rate` |
 | **`UCL_Finals_1955-2023.csv`** | 69 | Individual final match statistics (1955–2023) | `Season` | `Winner_Goals`, `Runnersup_Goals`, `Attendance` |
+
+💡 Key Insights Discovered
+
+Dominant Force: Real Madrid leads all-time historical metrics in total match victories, goals scored, and overall finals conversion rate.
+
+🚀 How to Run
+Clone the Repository
+
+Bash
+git clone [https://github.com/DEVYAM07/ucl-data-analysis-eda.git](https://github.com/DEVYAM07/ucl-data-analysis-eda.git)
+cd ucl-data-analysis-eda
+Install Dependencies
+
+Bash
+pip install pandas numpy matplotlib seaborn openpyxl jupyter
+Launch Notebook Pipeline
+
+Bash
+jupyter notebook notebooks/UCL_Data_Analysis.ipynb
+Run all cells sequentially to execute the cleaning pipeline, visual analysis, and report generation.
