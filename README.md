@@ -16,3 +16,18 @@ Hey there! 👋 Welcome to my end-to-end Python data engineering and exploratory
 ├── notebooks/
 │   └── UCL_Data_Analysis.ipynb           # End-to-end pandas cleaning & EDA notebook
 └── README.md                             # Project documentation
+```
+
+🛠️ How the Pipeline Works
+The data engineering workflow is structured into four sequential phases inside UCL_Data_Analysis.ipynb:
+
+┌───────────────────────────┐     ┌───────────────────────────┐
+│ 1. Data Assessment        │ ──> │ 2. Cleaning & Transformation│
+│ Profiling & Anomaly Audit │     │ String Parsing & Renaming │
+└───────────────────────────┘     └───────────────────────────┘
+                                                │
+                                                ▼
+┌───────────────────────────┐     ┌───────────────────────────┐
+│ 4. Exploratory Analysis   │ <── │ 3. Feature Engineering    │
+│ Statistical EDA & Insights│     │ Deduplication & Type Cast │
+└───────────────────────────┘     └───────────────────────────┘
