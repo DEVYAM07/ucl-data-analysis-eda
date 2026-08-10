@@ -76,3 +76,7 @@ Top 5 clubs by overall win percentage (min. 50 matches):
 df_alltime['Win_Rate'] = (df_alltime['Wins'] / df_alltime['Matches']) * 100
 top_clubs = df_alltime[df_alltime['Matches'] >= 50].sort_values(by='Win_Rate', ascending=False).head(5)
 ```
+
+📊 Datasets & Schema
+
+DatasetRecordsDescriptionCleaned Primary KeyKey Engineered FeaturesUCL_AllTime_Performance_Table.csv354Club-level all-time competition statisticsRankGoals_Scored, Goals_Conceded, Win_RateUCL_Finals_1955-2023.csv69Individual final match statistics (1955–2023)SeasonWinner_Goals, Runnersup_Goals, Attendance
