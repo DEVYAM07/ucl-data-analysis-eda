@@ -94,3 +94,13 @@ Dominant Force: Real Madrid leads all-time historical metrics in total match vic
    ```bash
    git clone [https://github.com/DEVYAM07/ucl-data-analysis-eda.git](https://github.com/DEVYAM07/ucl-data-analysis-eda.git)
    cd ucl-data-analysis-eda
+   ```
+2. **Install Dependencies**
+   ```bash
+     pip install pandas numpy matplotlib seaborn openpyxl jupyter
+    ```
+3. **Launch Notebook Pipeline**
+   ```bash
+      jupyter notebook notebooks/UCL_Data_Analysis.ipynb
+    ```
+Run all cells sequentially to execute the cleaning pipeline, visual analysis, and report generation.
