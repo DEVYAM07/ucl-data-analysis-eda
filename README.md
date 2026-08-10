@@ -33,3 +33,20 @@ The data engineering workflow is structured into four sequential phases inside `
 │ 4. Exploratory Analysis   │ <── │ 3. Feature Engineering    │
 │ Statistical EDA & Insights│     │ Deduplication & Type Cast │
 └───────────────────────────┘     └───────────────────────────┘
+```
+
+1️⃣ Assessment & Profiling
+->Identifies 21 missing values in rank attributes and 51 unrecorded notes in finals listings.
+->Uncovers non-standard string formats in composite fields (goals stored as scored:conceded, Score as Winner–RunnerUp).
+->Detects formatting anomalies in string numeric values (e.g., Attendance containing comma separators).
+
+2️⃣ Cleaning & Data Transformation
+->Missing Value Imputation: Applies forward linear interpolation to restore missing tournament rank order and imputes missing match condition notes.
+->Header Standardization: Renames abbreviated and non-standard column titles (# → Rank, M. → Matches, Dif → Goal_Difference, Pt. → Points).
+->Composite Column Extraction: Splits composite score strings into discrete numerical metrics for goals scored and conceded.
+
+
+
+
+
+
