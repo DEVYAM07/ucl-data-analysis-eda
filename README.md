@@ -64,3 +64,27 @@ df_finals = df_finals.drop_duplicates(subset=['Season'], keep='first')
 df_alltime['Win_Rate'] = (df_alltime['Wins'] / df_alltime['Matches']) * 100
 top_clubs = df_alltime[df_alltime['Matches'] >= 50].sort_values(by='Win_Rate', ascending=False).head(5)
 
+📊 Datasets & SchemaDatasetRecordsDescriptionCleaned Primary KeyKey Engineered FeaturesUCL_AllTime_Performance_Table.csv354Club-level all-time competition statistics  RankGoals_Scored, Goals_Conceded, Win_RateUCL_Finals_1955-2023.csv69Individual final match statistics (1955–2023)  SeasonWinner_Goals, Runnersup_Goals, Attendance
+
+💡 Key Insights Discovered
+-> Dominant Force: Real Madrid leads all-time historical metrics in total match victories, goals scored, and overall finals conversion rate.
+
+🚀 How to Run
+1. Clone the Repository
+Bash
+git clone https://github.com/your-username/ucl-data-cleaning-eda.git
+cd ucl-data-cleaning-eda
+2. Install Dependencies
+Bash
+pip install pandas numpy matplotlib seaborn openpyxl jupyter
+3. Launch Notebook Pipeline
+Bash
+jupyter notebook notebooks/UCL_Data_Analysis.ipynb
+Run all cells sequentially to execute the cleaning pipeline, visual analysis, and report generation.
+
+🧰 Tech Stack
+Language: Python 3.8+
+Data Manipulation: pandas, numpy
+Visualization: matplotlib
+
+Thanks for checking out my project! Feel free to star ⭐️ the repository if you found it useful!
