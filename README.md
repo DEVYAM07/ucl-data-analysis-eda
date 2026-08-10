@@ -18,9 +18,11 @@ Hey there! 👋 Welcome to my end-to-end Python data engineering and exploratory
 └── README.md                             # Project documentation
 ```
 
-🛠️ How the Pipeline Works
-The data engineering workflow is structured into four sequential phases inside UCL_Data_Analysis.ipynb:
+## 🛠️ How the Pipeline Works
 
+The data engineering workflow is structured into four sequential phases inside `UCL_Data_Analysis.ipynb`:
+
+```text
 ┌───────────────────────────┐     ┌───────────────────────────┐
 │ 1. Data Assessment        │ ──> │ 2. Cleaning & Transformation│
 │ Profiling & Anomaly Audit │     │ String Parsing & Renaming │
